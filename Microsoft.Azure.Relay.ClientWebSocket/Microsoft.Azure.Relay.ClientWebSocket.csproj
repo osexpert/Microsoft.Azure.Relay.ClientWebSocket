@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>Microsoft.Azure.Relay.ClientWebSocket</AssemblyName>
+    <RootNamespace>Microsoft.Azure.Relay</RootNamespace>
+    <Version>2.0.1.2</Version>
+    <Company>Microsoft</Company>
+    <Authors>Microsoft</Authors>
+    <Description>This is the Azure Relay .NET Standard client library for Hybrid Connections. For more information about Relay see https://azure.microsoft.com/en-us/services/service-bus/.
+      This package is only supported on Windows 8 / Windows Server 2012 and newer.
+Extract of the WebSocket code of Azure Relay. Gunnar.
+2.0.1 - 2.0.1.1: fixed https://github.com/dotnet/runtime/issues/26240
+Added Dispose to IClientWebSocket
+2.0.1.1 - 2.0.1.2 assembly name change .Websocket -&gt; ClientWebSocket</Description>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.1.0.0</FileVersion>
+    <PackageReleaseNotes>https://github.com/Azure/azure-relay-dotnet/releases</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/Azure/azure-relay-dotnet</PackageProjectUrl>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>AKVAgroup.Fishtalk.ClientWebSocket</PackageId>
+    <Product>AKVAgroup.Fishtalk.ClientWebSocket</Product>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>../../../src/build/Fishtalk.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Buffers" Version="4.5.1" />
+  </ItemGroup>
+</Project>
